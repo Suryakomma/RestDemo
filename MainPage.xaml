@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RestDemoN"
+             x:Class="RestDemoN.MainPage">
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>-->
+        <StackLayout>
+            <ListView x:Name="Post_List" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Title}" Detail="{Binding body}"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Add" BackgroundColor="Cyan" Clicked="Button_Add"/>
+                <Button Text="Update" BackgroundColor="Cyan" HorizontalOptions="CenterAndExpand" Clicked="Button_Update"/>
+            <Button Text="Delete" BackgroundColor="Cyan" Clicked="Button_Delete"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
